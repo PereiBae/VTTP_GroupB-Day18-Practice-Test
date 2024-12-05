@@ -1,0 +1,43 @@
+# Ignore the .git directory
+.git
+.gitignore
+
+# Ignore logs
+*.log
+logs/
+
+# Ignore build and temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Ignore dependency directories
+node_modules/
+vendor/
+target/
+dist/
+build/
+
+# Ignore environment files
+.env
+.env.*
+
+# Ignore IDE and editor files
+*.idea
+*.vscode/
+*.DS_Store
+*.project
+*.classpath
+*.settings/
+*.iml
+
+# Ignore Docker-related files (except the Dockerfile)
+.dockerignore
+docker-compose.override.yml
+
+# Ignore other unnecessary files
+*.~undo
+Thumbs.db
+__pycache__/
+*.pyc
