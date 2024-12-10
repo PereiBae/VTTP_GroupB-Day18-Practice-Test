@@ -37,6 +37,7 @@ WORKDIR ${WORK_DIR}
 
 COPY --from=builder /compiledir/target/practice-test-0.0.1-SNAPSHOT.jar practiceTest.jar
 COPY src/main/resources/static/todos.json /app/todos.json
+COPY src/main/resources/static/products.json /app/products.json
 
 ENV PORT=3000
 ENV SPRING_DATA_REDIS_USERNAME=""

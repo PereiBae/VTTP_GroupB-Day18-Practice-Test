@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Successful Purchase</title>
+</head>
+<body>
+
+<h1>Congratulations! You have purchased your new <code th:text="${Product.title}"></code></h1>
+<p>Description: <code  th:text="${Product.description}"></code></p>
+<p>Brand: <code  th:text="${Product.brand}"></code></p>
+<p>Category: <code  th:text="${Product.category}"></code></p>
+<p>Rating: <code  th:text="${Product.rating}"></code></p>
+<p>Price: <code  th:text="${Product.price}"></code></p>
+<p>Discount Percentage: <code  th:text="${Product.discountPercentage}"></code></p>
+<a th:href="@{/products}">Next</a>
+
+</body>
+</html>

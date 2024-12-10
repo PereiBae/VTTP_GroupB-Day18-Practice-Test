@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products Listing Page</title>
+</head>
+<body>
+
+<div>
+  <table>
+    <thead>
+    <tr>
+      <th>Product ID</th>
+      <th>Product Title</th>
+      <th>Price</th>
+      <th>Discount Percentage</th>
+      <th>Rating</th>
+      <th>Stock</th>
+      <th>Brand</th>
+      <th>Category</th>
+      <th>Dated</th>
+      <th>Buy</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="product : ${Products}">
+      <td th:text="${product.id}"></td>
+      <td th:text="${product.title}"></td>
+      <td th:text="${product.price}"></td>
+      <td th:text="${product.discountPercentage}"></td>
+      <td th:text="${product.rating}"></td>
+      <td th:text="${product.stock}"></td>
+      <td th:text="${product.brand}"></td>
+      <td th:text="${product.category}"></td>
+      <td th:text="${product.dated}"></td>
+      <td th:text="${product.buy}"></td>
+      <td>
+        <form th:action="@{/products/{productId}(productId=${product.id})}" method="post">
+          <button type="submit">Buy</button>
+        </form>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
